@@ -1,7 +1,7 @@
 
 # Aplicação Streamlit que busca dados de qualquer API REST (com suporte a autenticação) e exporta para Excel.
 
-![Demo](https://api-to-excel.streamlit.app/)
+Demo https://api-to-excel.streamlit.app/
 
 ## 🚀 Funcionalidades
 - Suporta **qualquer API REST** (respostas JSON)
