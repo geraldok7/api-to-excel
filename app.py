@@ -185,6 +185,7 @@ with st.expander("🔍 Exemplos de APIs para testar"):
     - 🐕 [Dog API](https://dog.ceo/api/breeds/image/random) (retorno único)
     - 🏛️ [Brasil API](https://brasilapi.com.br/api/cep/v2/01001000) (retorno único)
     - 📰 [NewsAPI](https://newsapi.org/v2/top-headlines?country=us) (requer chave)
+    - 🛒 [Fake Store API](https://fakestoreapi.com/products) (dados fictícios)
     """)
 
 st.markdown("---")
