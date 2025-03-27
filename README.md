@@ -1,61 +1,89 @@
+# Aplicacao Streamlit que busca dados de qualquer API REST (com suporte a autenticacao) e exporta para Excel.
 
-# Aplicação Streamlit que busca dados de qualquer API REST (com suporte a autenticação) e exporta para Excel.
-
-Demo https://api-to-excel.streamlit.app/
+Demo: https://api-to-excel.streamlit.app/
 
 ## 🚀 Funcionalidades
 - Suporta **qualquer API REST** (respostas JSON)
 - Manipula:
-  - Objetos únicos (`/endpoint/1`)
+  - Objetos unicos (`/endpoint/1`)
   - Arrays de objetos (`/endpoint`)
   - Respostas paginadas (`/endpoint?page=1`)
-- Métodos de autenticação:
-  - 🔑 Autenticação Básica
-  - 🪙 Token Bearer
+- Metodos de autenticacao:
+  - 🔑 Autenticacao Basica
+  - 🧩 Token Bearer
   - 🔐 Chave API
-- Normalização automática de dados
-- Exportação limpa para Excel com colunas formatadas
+- Normalizacao automatica de dados
+- Exportacao limpa para Excel com colunas formatadas
 
-## 🛠️ Instalação
-1. Clone o repositório:
+## 🛠️ Instalacao
+
+### Metodo Local
+1. Clone o repositorio:
    ```bash
-   git clone https://github.com/yourusername/api-to-excel.git
+   git clone https://github.com/geraldok7/api-to-excel.git
    cd api-to-excel
    ```
-
-2. Instale as dependências:
+2. Instale as dependencias:
    ```bash
    pip install -r requirements.txt
    ```
-
-3. Execute a aplicação:
+3. Execute a aplicacao:
    ```bash
    streamlit run app.py
    ```
 
+### Metodo Docker (Recomendado)
+1. Construa a imagem:
+   ```bash
+   docker build -t api-to-excel .
+   ```
+2. Execute o container:
+   ```bash
+   docker run -p 8501:8501 api-to-excel
+   ```
+3. Acesse no navegador:
+   ```
+   http://localhost:8501
+   ```
+
+## 🐳 Configuracao Docker Avancada
+Para producao, utilize docker-compose:
+
+1. Crie um arquivo .env (opcional):
+   ```
+   API_USER=seu_usuario
+   API_PASS=sua_senha
+   ```
+2. Execute:
+   ```bash
+   docker-compose up -d --build
+   ```
+
 ## 🧑‍💻 Uso
 1. Insira a URL do endpoint da API
-2. Selecione o tipo de autenticação (se necessário)
+2. Selecione o tipo de autenticacao (se necessario)
 3. Clique em "Coletar e Exportar"
 4. Visualize os dados e baixe o arquivo Excel
 
 ## 🧪 APIs Testadas
-| API | URL de Exemplo | Tipo |
-|-----|----------------|------|
-| JSONPlaceholder | `https://jsonplaceholder.typicode.com/posts` | Array |
-| SWAPI | `https://swapi.dev/api/people/` | Paginada |
-| Dog API | `https://dog.ceo/api/breeds/image/random` | Objeto Único |
-| BrasilAPI | `https://brasilapi.com.br/api/cep/v2/01001000` | Objeto Único |
+
+| API             | URL de Exemplo                                       | Tipo         |
+|---------------|-------------------------------------------------|-------------|
+| JSONPlaceholder | https://jsonplaceholder.typicode.com/posts    | Array       |
+| SWAPI          | https://swapi.dev/api/people/                  | Paginada    |
+| Dog API       | https://dog.ceo/api/breeds/image/random        | Objeto Unico |
+| BrasilAPI     | https://brasilapi.com.br/api/cep/v2/01001000   | Objeto Unico |
+| IBGE          | https://servicodados.ibge.gov.br/api/v1/localidades/estados | Array       |
 
 ## 🤝 Contribuindo
-1. Faça um fork do projeto
-2. Crie sua branch de funcionalidade (`git checkout -b feature/FuncionalidadeIncrível`)
-3. Faça o commit das suas alterações (`git commit -m 'Adicionar funcionalidade incrível'`)
-4. Faça o push para a branch (`git push origin feature/FuncionalidadeIncrível`)
+1. Faca um fork do projeto
+2. Crie sua branch de funcionalidade (`git checkout -b feature/FuncionalidadeIncrivel`)
+3. Faca o commit das suas alteracoes (`git commit -m 'Adicionar funcionalidade incrivel'`)
+4. Faca o push para a branch (`git push origin feature/FuncionalidadeIncrivel`)
 5. Abra um Pull Request
 
-## 📜 Licença
-Distribuído sob a Licença MIT. Veja `LICENSE` para mais informações.
+## 📝 Licenca
+Distribuido sob a Licenca MIT. Veja LICENSE para mais informacoes.
 
 ## 📧 Contato
 Geraldo - geraldoaugustodf@gmail.com
